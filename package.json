@@ -3,10 +3,15 @@
     "version": "1.0.0",
     "main": "app.js",
     "scripts": {
-      "start": "node app.js"
+        "start": "node app.js",
+        "start:dev": "docker-compose -f docker-compose.dev.yml up",
+        "stop:dev": "docker-compose -f docker-compose.dev.yml down -v",
+        "start:prod": "docker-compose -f docker-compose.prod.yml up --build",
+        "stop:prod": "docker-compose -f docker-compose.prod.yml down --build"
     },
     "dependencies": {
-      "@elastic/elasticsearch": "^7.14.0",
-      "express": "^4.17.1"
+        "@elastic/elasticsearch": "^7.14.0",
+        "dotenv": "^16.4.5",
+        "express": "^4.17.1"
     }
-  }
+}
