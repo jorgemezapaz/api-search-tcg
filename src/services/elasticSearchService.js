@@ -1,8 +1,7 @@
 const elastic = require('elasticsearch');
 
 const client = new elastic.Client({
-  host: 'https://16q48yv32h:ncdvrc3w4j@elastic-5639189895.us-east-1.bonsaisearch.net:443', 
-  log: 'trace'
+  host: process.env.ACCESS_BONSAI, 
 });
 
 exports.createCard = async (card) => {
