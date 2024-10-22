@@ -1,4 +1,5 @@
 const elastic = require('elasticsearch');
+require('dotenv').config();
 
 const client = new elastic.Client({
   host: process.env.ACCESS_BONSAI, 

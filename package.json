@@ -3,9 +3,7 @@
     "version": "1.0.0",
     "main": "app.js",
     "scripts": {
-        "start": "node app.js",
-        "start:prod": "docker-compose -f docker-compose.prod.yml up --build",
-        "stop:prod": "docker-compose -f docker-compose.prod.yml down --build"
+        "start": "node app.js"
     },
     "dependencies": {
         "@elastic/elasticsearch": "^7.14.0",
